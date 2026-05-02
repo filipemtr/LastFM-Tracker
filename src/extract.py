@@ -33,7 +33,7 @@ s3 = boto3.client(
     's3',
     aws_access_key_id=f'{AWS_KEY}',
     aws_secret_access_key=f'{AWS_SECRET}',
-    region_name='us-east-1'  # ou sua região
+    region_name='us-east-1'
 )
 
 # conexão feita, só falta converter os dicts pra dataframe do jeito certo, converter pra parquet e dar
