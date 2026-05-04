@@ -3,3 +3,4 @@ docker-compose.yaml
 venv/
 .venv/
 *.parquet
+__pycache__/
