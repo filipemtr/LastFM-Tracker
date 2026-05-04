@@ -6,13 +6,15 @@ import pandas as pd
 import os
 import boto3
 
-def converseIntoDF(object: dict | list, column: list = None):
+load_dotenv()
+
+# Receives an list / dict and the names of the columns if its necessary and convert it into a object!
+
+def convertIntoDF(object: dict | list, column: list = None):
     dataframe = pd.DataFrame(data=object, columns=column)
     dataframe.insert(0, "ID", range(1, len(dataframe) + 1))
 
     return dataframe
-
-load_dotenv()
 
 # Global charts data extraction 
 artists_charts = extract_artists()
@@ -37,19 +39,19 @@ for country in countries:
 # Converting dicts and lists to dataframes
 
 # Global artists charts
-df_artists = converseIntoDF(artists_charts, ["Artist Name", "Listeners", "Playcount"])
+df_artists = convertIntoDF(artists_charts, ["Artist Name", "Listeners", "Playcount"])
 
 # Global genders charts
-df_genders = converseIntoDF(genders_charts, ["Gender"])
+df_genders = convertIntoDF(genders_charts, ["Gender"])
 
 # Global tracks charts
-df_tracks = converseIntoDF(tracks_charts, ["Music Name", "Playcount", "Artist"])
+df_tracks = convertIntoDF(tracks_charts, ["Music Name", "Playcount", "Artist"])
 
 # Country based artists charts
-df_country_artists = converseIntoDF(country_artist_info)
+df_country_artists = convertIntoDF(country_artist_info)
 
 # Country based tracks charts
-df_country_tracks = converseIntoDF(country_track_info)
+df_country_tracks = convertIntoDF(country_track_info)
 
 # Saving locally 
 BASE_DIR = Path(__file__).parent.parent
