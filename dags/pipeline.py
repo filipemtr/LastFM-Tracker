@@ -13,7 +13,7 @@ with DAG(
     start_date=datetime(2026, 5, 15),
     schedule="@daily",
     catchup=False
-) as dag:
+) as databricks_dag:
     
     run_job = DatabricksRunNowOperator(
         job_name="run_databricks_now",
