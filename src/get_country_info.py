@@ -39,6 +39,6 @@ def country_tracks(country: str):
 
     templist = []
     for track in content:
-        templist.append([track["name"], track["artist"]["name"]])
+        templist.append([track["name"], track["artist"]["name"], country.title()])
 
     return templist

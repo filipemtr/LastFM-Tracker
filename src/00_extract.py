@@ -32,10 +32,6 @@ country_artist_info = {}
 for country in countries:
     country_artist_info[country] = country_artists(country)
 
-country_track_info = {}
-for country in countries:
-    country_track_info[country] = country_tracks(country)
-
 # Converting dicts and lists to dataframes
 
 # Global artists charts
@@ -44,14 +40,17 @@ df_artists = convertIntoDF(artists_charts, ["Artist Name", "Listeners", "Playcou
 # Global genders charts
 df_genders = convertIntoDF(genders_charts, ["Gender"])
 
-# Global tracks charts
+# Global tracks chartscountry_artist_info
 df_tracks = convertIntoDF(tracks_charts, ["Music Name", "Playcount", "Artist"])
 
 # Country based artists charts
 df_country_artists = convertIntoDF(country_artist_info)
 
 # Country based tracks charts
-df_country_tracks = convertIntoDF(country_track_info)
+tracks = [country_tracks(ctr) for ctr in countries]
+flat_tracks = [item for country in tracks for item in country]
+
+df_country_tracks = convertIntoDF(flat_tracks, ["Music Name", "Artist", "Country"])
 
 # Saving locally 
 BASE_DIR = Path(__file__).parent.parent
@@ -107,9 +106,3 @@ for item in RAW_DIR.rglob("*.parquet"):
             Bucket="lastfm-tracker",
             Key="bronze/data/country_data/tracks_charts/c_tracks.parquet"
         )
-
-
-
-
-
-
