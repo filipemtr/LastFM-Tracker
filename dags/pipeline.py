@@ -3,17 +3,14 @@ from airflow.providers.databricks.operators.databricks import DatabricksRunNowOp
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
-
-
 from datetime import datetime
 
 with DAG(
     dag_id="lastfm_pipeline",
-    start_date=datetime(2026, 5, 15),
+    start_date=datetime(2026, 5, 20),
     schedule="@daily",
     catchup=False
-) as databricks_dag:
+) as dag:
     
     run_job = DatabricksRunNowOperator(
         task_id="run_databricks_now",
