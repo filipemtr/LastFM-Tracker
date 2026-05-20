@@ -1,0 +1,30 @@
+[2026-05-20T13:49:36.505+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2026-05-20T13:49:36.523+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: lastfm_pipeline.run_databricks_now manual__2026-05-20T13:49:34.487944+00:00 [queued]>
+[2026-05-20T13:49:36.528+0000] {taskinstance.py:2631} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: lastfm_pipeline.run_databricks_now manual__2026-05-20T13:49:34.487944+00:00 [queued]>
+[2026-05-20T13:49:36.528+0000] {taskinstance.py:2884} INFO - Starting attempt 1 of 1
+[2026-05-20T13:49:36.537+0000] {taskinstance.py:2907} INFO - Executing <Task(DatabricksRunNowOperator): run_databricks_now> on 2026-05-20 13:49:34.487944+00:00
+[2026-05-20T13:49:36.545+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=235) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2026-05-20T13:49:36.545+0000] {standard_task_runner.py:72} INFO - Started process 236 to run task
+[2026-05-20T13:49:36.545+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'lastfm_pipeline', 'run_databricks_now', 'manual__2026-05-20T13:49:34.487944+00:00', '--job-id', '3', '--raw', '--subdir', 'DAGS_FOLDER/pipeline.py', '--cfg-path', '/tmp/tmp4qk3nzxq']
+[2026-05-20T13:49:36.546+0000] {standard_task_runner.py:105} INFO - Job 3: Subtask run_databricks_now
+[2026-05-20T13:49:36.583+0000] {task_command.py:467} INFO - Running <TaskInstance: lastfm_pipeline.run_databricks_now manual__2026-05-20T13:49:34.487944+00:00 [running]> on host e70c458afd44
+[2026-05-20T13:49:36.658+0000] {taskinstance.py:3157} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='lastfm_pipeline' AIRFLOW_CTX_TASK_ID='run_databricks_now' AIRFLOW_CTX_EXECUTION_DATE='2026-05-20T13:49:34.487944+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2026-05-20T13:49:34.487944+00:00'
+[2026-05-20T13:49:36.659+0000] {taskinstance.py:740} INFO - ::endgroup::
+[2026-05-20T13:49:36.729+0000] {base.py:84} INFO - Retrieving connection 'databricks_default'
+[2026-05-20T13:49:38.694+0000] {databricks.py:94} INFO - Run submitted with run_id: 845415509083038
+[2026-05-20T13:49:40.524+0000] {databricks.py:146} INFO - run_databricks_now in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-05-20T13:49:40.524+0000] {databricks.py:147} INFO - View run status, Spark UI, and logs at https://dbc-c0354f21-8c91.cloud.databricks.com/?o=7474649058056195#job/290459043781745/run/845415509083038
+[2026-05-20T13:49:40.525+0000] {databricks.py:148} INFO - Sleeping for 30 seconds.
+[2026-05-20T13:50:11.451+0000] {databricks.py:146} INFO - run_databricks_now in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-05-20T13:50:11.452+0000] {databricks.py:147} INFO - View run status, Spark UI, and logs at https://dbc-c0354f21-8c91.cloud.databricks.com/?o=7474649058056195#job/290459043781745/run/845415509083038
+[2026-05-20T13:50:11.452+0000] {databricks.py:148} INFO - Sleeping for 30 seconds.
+[2026-05-20T13:50:42.481+0000] {databricks.py:146} INFO - run_databricks_now in run state: {'life_cycle_state': 'RUNNING', 'result_state': '', 'state_message': ''}
+[2026-05-20T13:50:42.481+0000] {databricks.py:147} INFO - View run status, Spark UI, and logs at https://dbc-c0354f21-8c91.cloud.databricks.com/?o=7474649058056195#job/290459043781745/run/845415509083038
+[2026-05-20T13:50:42.481+0000] {databricks.py:148} INFO - Sleeping for 30 seconds.
+[2026-05-20T13:51:13.401+0000] {databricks.py:105} INFO - run_databricks_now completed successfully.
+[2026-05-20T13:51:13.401+0000] {databricks.py:106} INFO - View run status, Spark UI, and logs at https://dbc-c0354f21-8c91.cloud.databricks.com/?o=7474649058056195#job/290459043781745/run/845415509083038
+[2026-05-20T13:51:13.417+0000] {taskinstance.py:349} INFO - ::group::Post task execution logs
+[2026-05-20T13:51:13.418+0000] {taskinstance.py:361} INFO - Marking task as SUCCESS. dag_id=lastfm_pipeline, task_id=run_databricks_now, run_id=manual__2026-05-20T13:49:34.487944+00:00, execution_date=20260520T134934, start_date=20260520T134936, end_date=20260520T135113
+[2026-05-20T13:51:13.467+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2026-05-20T13:51:13.487+0000] {taskinstance.py:3924} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2026-05-20T13:51:13.488+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

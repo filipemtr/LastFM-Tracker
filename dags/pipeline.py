@@ -7,7 +7,7 @@ from datetime import datetime
 
 with DAG(
     dag_id="lastfm_pipeline",
-    start_date=datetime(2026, 5, 20),
+    start_date=datetime(2026, 5, 22),
     schedule="@daily",
     catchup=False
 ) as dag:
