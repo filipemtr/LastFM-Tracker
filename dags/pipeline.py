@@ -1,7 +1,7 @@
 from airflow import DAG
 from airflow.providers.databricks.operators.databricks import DatabricksRunNowOperator
 from dotenv import load_dotenv
-from os import getenv
+import os
 
 load_dotenv()
 
@@ -16,7 +16,7 @@ with DAG(
 ) as databricks_dag:
     
     run_job = DatabricksRunNowOperator(
-        job_name="run_databricks_now",
+        task_id="run_databricks_now",
         databricks_conn_id="databricks_default",
-        job_id= getenv("job_id")
+        job_id=int(os.getenv("JOB_ID")),
     )
