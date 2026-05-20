@@ -60,8 +60,8 @@ df_country_artists.to_parquet(RAW_DIR / "country_data" / "artists_charts" / "c_a
 df_country_tracks.to_parquet(RAW_DIR / "country_data" / "tracks_charts" / "c_tracks.parquet", index=False)
 
 # S3 Bucket Conn
-AWS_KEY = os.getenv("AWS_KEY")
-AWS_SECRET = os.getenv("AWS_SECRET")
+AWS_KEY = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 s3 = boto3.client(
     's3',
