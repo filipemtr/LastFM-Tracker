@@ -1646,3 +1646,52 @@ TypeError: int() argument must be a string, a bytes-like object or a real number
 [2026-05-20T14:02:23.606+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:02:23.606+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2026-05-20T14:02:23.633+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:02:23.633+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
 [2026-05-20T14:02:23.649+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.102 seconds
+[2026-05-20T14:02:53.706+0000] {processor.py:186} INFO - Started process (PID=363) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:02:53.707+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:02:53.709+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:02:53.708+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:02:53.724+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:02:53.759+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:02:53.758+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:02:53.780+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:02:53.780+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:02:53.794+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.093 seconds
+[2026-05-20T14:03:23.970+0000] {processor.py:186} INFO - Started process (PID=368) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:23.973+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:03:23.976+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:23.976+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:23.992+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:24.020+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:24.020+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:03:24.045+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:24.045+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:03:24.062+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.098 seconds
+[2026-05-20T14:03:54.141+0000] {processor.py:186} INFO - Started process (PID=373) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:54.142+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:03:54.144+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:54.144+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:54.162+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:03:54.191+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:54.191+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:03:54.216+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:03:54.216+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:03:54.233+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.099 seconds
+[2026-05-20T14:04:24.387+0000] {processor.py:186} INFO - Started process (PID=378) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:24.390+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:04:24.392+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:24.392+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:24.409+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:24.439+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:24.438+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:04:24.464+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:24.463+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:04:24.479+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.098 seconds
+[2026-05-20T14:04:54.558+0000] {processor.py:186} INFO - Started process (PID=383) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:54.559+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:04:54.561+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:54.561+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:54.576+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:04:54.605+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:54.605+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:04:54.632+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:04:54.631+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:04:54.646+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.095 seconds
+[2026-05-20T14:05:24.818+0000] {processor.py:186} INFO - Started process (PID=388) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:24.819+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:05:24.821+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:24.821+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:24.837+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:24.865+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:24.864+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:05:24.889+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:24.889+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:05:24.906+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.094 seconds
+[2026-05-20T14:05:54.982+0000] {processor.py:186} INFO - Started process (PID=393) to work on /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:54.983+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/pipeline.py for tasks to queue
+[2026-05-20T14:05:54.985+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:54.985+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:55.001+0000] {processor.py:925} INFO - DAG(s) 'lastfm_pipeline' retrieved from /opt/airflow/dags/pipeline.py
+[2026-05-20T14:05:55.033+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:55.032+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2026-05-20T14:05:55.056+0000] {logging_mixin.py:190} INFO - [2026-05-20T14:05:55.056+0000] {dag.py:4180} INFO - Setting next_dagrun for lastfm_pipeline to 2026-05-22 00:00:00+00:00, run_after=2026-05-23 00:00:00+00:00
+[2026-05-20T14:05:55.072+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/pipeline.py took 0.096 seconds

@@ -20,7 +20,8 @@ def country_artists(country: str):
 
     templist = []
     for artist in content:
-        templist.append(artist["name"])
+
+        templist.append([artist["name"], country])
     
     return templist
 

@@ -21,16 +21,11 @@ artists_charts = extract_artists()
 genders_charts = extract_genders()
 tracks_charts = extract_tracks()
 
-
 # Country based artists charts and tracks charts extraction
 countries = [ 
     "brazil", "united states", "argentina", "mexico", "china",
     "japan", "united kingdom", "canada", "india", "australia"
 ]
-
-country_artist_info = {}
-for country in countries:
-    country_artist_info[country] = country_artists(country)
 
 # Converting dicts and lists to dataframes
 
@@ -44,7 +39,10 @@ df_genders = convertIntoDF(genders_charts, ["Gender"])
 df_tracks = convertIntoDF(tracks_charts, ["Music Name", "Playcount", "Artist"])
 
 # Country based artists charts
-df_country_artists = convertIntoDF(country_artist_info)
+artists = [country_artists(ctr) for ctr in countries]
+flat_artists = [item for country in artists for item in country]
+df_country_artists = convertIntoDF(flat_artists, ["Artist", "Country"])
+print(df_country_artists)
 
 # Country based tracks charts
 tracks = [country_tracks(ctr) for ctr in countries]
@@ -59,14 +57,14 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 df_artists.to_parquet(RAW_DIR / "global_artists" / "artists.parquet", index=False)
 df_genders.to_parquet(RAW_DIR / "global_genders" / "genders.parquet", index=False)
 df_tracks.to_parquet(RAW_DIR / "global_tracks" /  "tracks.parquet", index=False)
-df_country_artists.to_parquet(RAW_DIR / "country_data" / "artists_charts" / "c_artists.parquet", index=False)
+# df_country_artists.to_parquet(RAW_DIR / "country_data" / "artists_charts" / "c_artists.parquet", index=False)
 df_country_tracks.to_parquet(RAW_DIR / "country_data" / "tracks_charts" / "c_tracks.parquet", index=False)
 
 # S3 Bucket Conn
 AWS_KEY = os.getenv("AWS_KEY")
 AWS_SECRET = os.getenv("AWS_SECRET")
 
-s3 = boto3.client(
+"""s3 = boto3.client(
     's3',
     aws_access_key_id=f'{AWS_KEY}',
     aws_secret_access_key=f'{AWS_SECRET}',
@@ -106,3 +104,4 @@ for item in RAW_DIR.rglob("*.parquet"):
             Bucket="lastfm-tracker",
             Key="bronze/data/country_data/tracks_charts/c_tracks.parquet"
         )
+"""
