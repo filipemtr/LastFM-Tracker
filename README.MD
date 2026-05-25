@@ -1,5 +1,4 @@
-# 🎵 Last.fm Lakehouse Analytics Platform
-
+# 🎵 LastFM-Tracker
 <div align="center">
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=for-the-badge\&logo=python)
@@ -120,6 +119,7 @@ The entire infrastructure is fully containerized with Docker and designed follow
 * Type casting
 * Deduplication
 * Transformation logic
+![Databricks](public/databricks.jpeg)
 
 ### Gold Layer
 
@@ -133,39 +133,9 @@ The entire infrastructure is fully containerized with Docker and designed follow
 
 # 📊 Star Schema Design
 
-## Fact Tables
+AWS Athena tables designed following star schema:
 
-### fact_global_tracks
-
-Stores global music metrics.
-
-### fact_country_tracks
-
-Stores country-based listening metrics.
-
-### fact_global_artists
-
-Stores artist performance analytics.
-
----
-
-## Dimension Tables
-
-### dim_tracks
-
-Track metadata and identifiers.
-
-### dim_artists
-
-Artist metadata.
-
-### dim_country
-
-Country normalization layer.
-
-### dim_genres
-
-Genre categorization.
+![Star](public/starschema_athena.jpeg)
 
 ---
 
@@ -189,7 +159,7 @@ Collected datasets include:
 
 Apache Airflow is responsible for:
 
-* Scheduling DAG executions
+* Scheduling daily DAG executions
 * Managing dependencies
 * Triggering Databricks jobs
 * Monitoring execution states
@@ -203,21 +173,6 @@ Apache Airflow is responsible for:
 * Task dependency management
 * Parameterized workflows
 * Modular DAG structure
-
----
-
-## 3. Distributed Processing with PySpark
-
-PySpark transformations are executed inside Databricks.
-
-Processing includes:
-
-* Cleaning corrupted records
-* Schema normalization
-* Joins between datasets
-* Analytical transformations
-* Star schema generation
-* Aggregations and enrichments
 
 ---
 
@@ -242,15 +197,6 @@ s3://lastfm-tracker/gold_layer/
 
 The BI layer connects directly to Athena.
 
-### Dashboard Features
-
-* Auto-refresh analytics
-* Interactive visualizations
-* Country filters
-* Artist ranking dashboards
-* Music trend analysis
-* KPI tracking
-* Time-based metrics
 
 # 📂 Project Structure
 
@@ -302,16 +248,7 @@ Includes orchestration, retries, error handling, and modularization.
 
 # 📸 Dashboard Preview
 
-```text
-Examples:
-
-• Top Artists by Country
-• Most Streamed Global Tracks
-• Genre Popularity Analysis
-• Country Listening Trends
-• Artist Ranking Evolution
-• Interactive Filters & Drilldowns
-```
+![superset](public/apachesuperset.jpeg)
 
 
 # 👨‍💻 Author
