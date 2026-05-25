@@ -4,3 +4,6 @@ venv/
 .venv/
 *.parquet
 __pycache__/
+*.log
+dag_processor_manager/
+logs/
